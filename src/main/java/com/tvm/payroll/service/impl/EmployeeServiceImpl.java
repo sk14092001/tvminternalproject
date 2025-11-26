@@ -39,7 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         Employee emp = new Employee();
         emp.setEmployeeCode(req.getEmployeeCode());
-        emp.setName(req.getName());
+        emp.setEmployeeName(req.getName());
         emp.setDesignation(req.getDesignation());
         emp.setLocation(req.getLocation());
         emp.setJoiningDate(req.getJoiningDate());
@@ -165,7 +165,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee updateEmployeeDetails(String employeeCode, EmployeeRequest req) {
         Employee emp = getEmployee(employeeCode); // throws if not found
 
-        if (req.getName() != null) emp.setName(req.getName());
+        if (req.getName() != null) emp.setEmployeeName(req.getName());
         if (req.getDesignation() != null) emp.setDesignation(req.getDesignation());
         if (req.getLocation() != null) emp.setLocation(req.getLocation());
         if (req.getPanNo() != null) emp.setPanNo(req.getPanNo());

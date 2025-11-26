@@ -242,3 +242,7 @@ GET /employees-with-salaries
 ```bash
 curl -X GET "http://localhost:8080/api/employees-with-salaries"
 ```
+
+### **9️⃣ Dashboard Summary**
+curl --location 'http://localhost:8080/api/dashboard' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzYW5qaXYiLCJpYXQiOjE3NjQxNTAwMTcsImV4cCI6MTc2NDE1MzYxN30.-674uE5LZA5cSkbkxALf64LK7fJZKIZh_Cb_lEx0ChGKQJyENnVAeVCRHGW6zvFB'

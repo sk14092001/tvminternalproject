@@ -24,7 +24,7 @@ public class EmployeeSalaryDTO {
     // ✅ Constructor to map Employee → DTO fields
     public EmployeeSalaryDTO(Employee emp, List<Salary> salaries) {
         this.employeeCode = emp.getEmployeeCode();
-        this.name = emp.getName();
+        this.name = emp.getEmployeeName();
         this.designation = emp.getDesignation();
         this.location = emp.getLocation();
         this.joiningDate = emp.getJoiningDate();
