@@ -61,7 +61,7 @@ public class AuthController {
                 .map(existingUser -> {
                     if (encoder.matches(user.getPassword(), existingUser.getPassword())) {
                         String token = jwtUtil.generateToken(existingUser.getUsername());
-                        return ResponseEntity.ok(Map.of("token", token));
+                        return ResponseEntity.ok(Map.of("token", token , "role", existingUser.getUserRole()));
                     } else {
                         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                                 .body(Map.of("error", "❌ Invalid password!"));

@@ -12,9 +12,19 @@ public class UserProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
-    private String password; // stored as hashed
+    private String password;
+    private  String userRole;// stored as hashed
 
-    // getters & setters
+    // getters & setters\
+
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
+    }
 
     public void setId(Long id) {
         this.id = id;
